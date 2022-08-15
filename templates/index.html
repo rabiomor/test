@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upright</title>
+
+</head>
+<body>    
+    <div class="container-fluid">
+        <div class="row">
+
+            
+
+
+            <div class="tm-main">
+                <!-- About section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-03.jpg"></div>
+                    <section id="about" class="tm-section">
+                        <hr class="mb-5">
+                        
+                        <div class="row tm-row-about">
+                            <div class="tm-col-about tm-col-about-l">
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="tm-carousel">
+                                {% for country in countries %}
+                                <div class="tm-carousel-item">
+                                    <div class="tm-about-text">
+                                        <h2 class="mb-3 tm-text-primary tm-about-title">Name:  {{ country.name }}</h2>
+                                        <h3><p>Official name:  {{ country.official_name }}</p></h3>
+                                        <p>Capital:  {{ country.capital }}</p>
+                                        <p>Region:  {{ country.region }}</p>
+                                        <p>Subregion:  {{ country.subregion }}</p>
+                                        <p>Population:  {{ country.population }}</p>
+                                        <p>Continents:  {{ country.continents }}</p>
+                                        <p>Timezones:  {{ country.timezones }}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                                
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                
+                            
+            </div>                     
+        </div>
+    </div> 
+</body>
+</html>
